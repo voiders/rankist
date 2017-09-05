@@ -6,7 +6,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "poi",
+    "start": "poi --port 80",
     "build": "poi build",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
@@ -14,24 +14,31 @@
   },
   "babel": {
     "presets": [
-      ["vue-app", {"useBuiltIns": true}]
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
     ]
   },
   "author": {
     "name": "albizures",
     "email": "albizures3601@gmail.com"
   },
-	"ava": {
+  "ava": {
     "babel": "inherit",
     "require": [
       "./test/helpers/setup.js"
     ]
   },
   "dependencies": {
-    "offline-plugin": "^4.8.0",
+    "chai": "^4.1.2",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
-    "promise-polyfill": "^6.0.2"
+    "offline-plugin": "^4.8.0",
+    "promise-polyfill": "^6.0.2",
+    "vuetify": "^0.15.2"
   },
   "devDependencies": {
     "poi": "^9.0.0",

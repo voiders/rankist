@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+notifications:
+  email: false
+  slack:
+    secure: U8X12/dth1IsIgwLoVWwYMhPeDdS7l0fFdYnQqfceSdLviB/u5yxLbDRQWSoDn72wF9wScQvXOA1nkLF62hh0i83n+TMoj9iTNkrD1fvJlheUFmP9ivxnrn7Xjg+9p3upxzuiMXUR8sYlh1BPVZEg86uVnvLoXjfRMsqVnhTHL0gucfT7pp6M9MoMjuR9/oNU79cpa+1tRNfp6UxedC8r4ZIMjC3eoQP6mqqlO8/4hNBGkK1YvRdaykBdUqJC/IqVzuYtlxKYWgWH+nQNcBWmorwVWhZPKmOYZHLpfZNQ9a54L1cYby+NWngVFG9HmKDpoo47fZCBBlPth0dS0co4Z96vSkDHR9LwEGObQ+eUlNXB3DRpMOCujJJBhow/imSfB5q3y7ta4p/sB/gI76L/+8ruSzeZPbT8r1DP9W2CoS7iSUnB6vTgQvcdi+64rtNxJSmAU7uY9nEcGYG+DAoZdnzKNI8y5hyNJEtVA56CdOuLBUBGfPJbRpz6So9pbLLb7fuw4ABSrpiO9ZsGOXvJqJ2rC/aoYXPWnmfCc26IbEOpeB+1R7e+9lfy1U0xHHjjpkKv68IWhTJHiXZ1lHvlx/xr07OHRaMoLTKvb0fR5KMfNW2Mo9MxwQM81zDTdrGPiaRPUDVybRN3qESsI3STq38YueL0SGYQ6SXZQHPvro=
+script:
+- npm t
+after_success:
+- npm run semantic-release
+branches:
+  except:
+  - "/^v\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
