@@ -3,14 +3,15 @@
   "name": "rankist",
   "productName": "rankist",
   "description": "the best place to found and create ranking lists",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "scripts": {
     "start": "poi --port 80",
     "build": "poi build",
     "report": "poi build --bundle-report",
     "serve": "serve dist --single",
-    "test": "cross-env NODE_ENV=test ava"
+    "test": "cross-env NODE_ENV=test ava",
+    "semantic-release": "[[ $(git rev-parse --abbrev-ref HEAD) == \"master\" ]] && semantic-release pre && semantic-release post"
   },
   "babel": {
     "presets": [
@@ -50,6 +51,11 @@
     "require-extension-hooks": "^0.2.0",
     "require-extension-hooks-vue": "^0.3.1",
     "require-extension-hooks-babel": "^0.1.1",
-    "poi-preset-offline": "^9.0.0"
+    "poi-preset-offline": "^9.0.0",
+    "semantic-release": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voiders/rankist-client.git"
   }
 }
