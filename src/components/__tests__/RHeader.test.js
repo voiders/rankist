@@ -1,9 +1,9 @@
 import test from 'ava'
+import RHeader from '../RHeader.vue'
 import Vue from 'vue'
-import App from '../src/components/App.vue'
 
-test('renders', t => {
-  const vm = new Vue(App).$mount()
+test('RHeader.vue', t => {
+  const vm = new Vue(RHeader).$mount()
   const tree = {
     $el: vm.$el.outerHTML
   }
