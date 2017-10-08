@@ -11,7 +11,7 @@ node_js:
 before_script:
   - npm prune
 script:
-- npm t
+  - npm t
 after_success:
   - npm run semantic-release
 branches:
